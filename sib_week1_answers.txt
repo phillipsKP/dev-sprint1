@@ -1,3 +1,19 @@
 *** Cut and paste the for loop here ***
 
+		<center>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				<br>
+				Results:
+				<pre>
+					{% for message in messages %}
+{{message}}
+					{% endfor %}
+				</pre>
+				{% endif %}
+			{% endwith %}
+		</center>
+
 *** What is the for loop doing? ***
+
+The loop is returning the output(s) from the python code execution input requests.
